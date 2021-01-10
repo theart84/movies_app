@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Loader />
+    <Notification />
     <PosterBG :poster="posterBg" />
     <Header />
     <MoviesList :list="moviesList" @changePoster="onChangePoster" />
@@ -19,6 +20,7 @@ import PosterBG from "@/components/PosterBG";
 import MoviesPagination from "@/components/MoviesPagination";
 import Loader from "@/components/Loader";
 import Header from "@/components/Header";
+import Notification from "@/components/Notification";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -28,7 +30,8 @@ export default {
     PosterBG,
     MoviesPagination,
     Loader,
-    Header
+    Header,
+    Notification
   },
   data: () => ({
     posterBg: ""
